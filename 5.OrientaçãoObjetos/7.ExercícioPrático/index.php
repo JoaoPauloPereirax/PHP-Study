@@ -1,14 +1,14 @@
 <?php
 require './calculadora.php';
 
-$numero=new exoo(5);
+$numero=new exoo(50);
 
-$numero->mais(5);
+$numero->mais(50);
 
-$numero->menos(2);
+$numero->menos(0);
 
-$numero->vezes(2);
+$numero->vezes(10);
 
-$numero->dividir(2);
+$numero->dividir(1);
 
 echo $numero->getTotal();
