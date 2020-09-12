@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+.pessoa{
+    max-width: 600px;
+    width: auto;
+    height: 200px;
+    background-color: #ddd;
+    margin: 30px;
+    padding: 10px;
+}

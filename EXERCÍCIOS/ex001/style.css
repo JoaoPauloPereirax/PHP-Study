@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+.raiz{
+    font-size: 30px;
+    height: 100px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    background-color: #dddddd;
+}

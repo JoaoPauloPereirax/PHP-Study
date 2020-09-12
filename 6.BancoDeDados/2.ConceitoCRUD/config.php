@@ -1,6 +1,7 @@
 <?php
-$db_name='test';
-$db_host='localhost';
-$db_user='root';
-$db_pass='';
-$pdo = new PDO('mysql:dbname='.$db_name.';host='.$db_host,$db_user,$db_pass);
+$name="test";
+$host="127.0.0.1";
+$user="root";
+$pass="";
+$pdo = new PDO("mysql:dbname=".$name.";host=".$host,$user,$pass);
+?>

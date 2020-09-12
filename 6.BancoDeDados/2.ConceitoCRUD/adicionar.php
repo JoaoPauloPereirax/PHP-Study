@@ -1,12 +1,7 @@
-<h1>Adicionar Usuário</h1>
-<form method="POST" action="adicionar_action.php">
+<form action="acao.php" method="POST">
     <label>
-        Nome <br>
-        <input type="text" name="name">
-    </label><br><br>
-    <label>
-        Email <br>
-        <input type="email" name="email">
-    </label><br><br>
-    <input type="submit" value="ADICIONAR">
+        NOME: <input type="text" name="nome"><br>
+        EMAIL: <input type="email" name="email"><br>
+        <input type="submit" value="Enviar">
+    </label>
 </form>
