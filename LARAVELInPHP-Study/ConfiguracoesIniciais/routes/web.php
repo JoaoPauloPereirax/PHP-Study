@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/')
+/*
+Essa rota está dizendo: quando o usuário acessar via get a raiz do sistema ele vai rodar essa função vai carregar um view chamado welcome, vamos trocar esse cara
+*/
