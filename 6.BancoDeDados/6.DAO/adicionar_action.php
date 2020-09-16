@@ -14,6 +14,7 @@ if($nome && $email){
         $novoUsuario=new Usuario();
         $novoUsuario->setNome($nome);
         $novoUsuario->setEmail($email);
+        
         $usuarioDao->create($novoUsuario);
 
         header("Location: index.php");

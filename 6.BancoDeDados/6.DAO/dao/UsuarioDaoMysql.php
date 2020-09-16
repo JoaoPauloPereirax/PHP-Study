@@ -8,9 +8,9 @@ class UsuarioDaoMysql implements UsuarioDAO{
     }
 
     public function create(Usuario $u){
-        $sql= $this->pdo->prepare("INSERT INTO primeiratabela (nome,email) VALUES (:nome, :email)");
-        $sql->bindValue(':nome',$u->getNome());
-        $sql->bindValue(':email',$u->getEmail());
+        $sql = $this->pdo->prepare("INSERT INTO primeiratabela (nome, email) VALUES (:nome, :email)");
+        $sql->bindValue(':nome', $u->getNome());
+        $sql->bindValue(':email', $u->getEmail());
         $sql->execute();
         $u->setId($this->pdo->lastInsertId());
         return $u;
@@ -40,11 +40,23 @@ class UsuarioDaoMysql implements UsuarioDAO{
         return $array;
     }
     public function findById($id){
-        
+        $sql = $this->pdo->prepare("SELECT * FROM primeiratabela WHERE id = :id");
+        $sql->bindValue(':id',$id);
+        $sql->execute();
+        if($sql->rowCount()>0){
+            $data = $sql->fetch();
+            $u=new Usuario();
+            $u->setId($data['id']);
+            $u->setNome($data['nome']);
+            $u->setEmail($data['email']);
+            return $u;
+        }else{
+            return false;
+        }
     }
     public function findByEmail($email){
-        $sql=$this->pdo->prepare("SELECT * FROM primeiratabela WHERE email=:email");
-        $sql=bindValue(':email',$email);
+        $sql = $this->pdo->prepare("SELECT * FROM primeiratabela WHERE email = :email");
+        $sql->bindValue(':email',$email);
         $sql->execute();
         if($sql->rowCount()>0){
             $data = $sql->fetch();
