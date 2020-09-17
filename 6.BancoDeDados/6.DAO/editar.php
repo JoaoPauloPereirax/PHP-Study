@@ -14,12 +14,14 @@ if($id){
 if($user === false){
     header("Location: index.php");
     exit;
-}else
+}else{
+
+}
 
 ?>
 <h1>Editar Usuário</h1>
 <form action="editar_action.php" method="POST">
-<input type="hidden" name="id" value="<?= $info['id'];?>">
+<input type="hidden" name="id" value="<?= $user->getId();?>">
     <label>
         NOME: <input type="text" name="nome" value="<?=$user->getNome();?>">
     </label><br><br>

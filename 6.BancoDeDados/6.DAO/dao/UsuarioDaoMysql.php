@@ -16,10 +16,18 @@ class UsuarioDaoMysql implements UsuarioDAO{
         return $u;
     }
     public function update(Usuario $u){
-
+        $sql=$this->pdo->prepare("UPDATE primeiratabela SET nome=:nome, email=:email WHERE id=:id");
+        $sql->bindValue(':nome',$u->getNome());
+        $sql->bindValue(':email',$u->getEmail());
+        $sql->bindValue(':id',$u->getId());
+        $sql->execute();
+        
+        return true; 
     }
     public function delete($id){
-
+        $sql=$this->pdo->prepare("DELETE FROM primeiratabela WHERE id=:id");
+        $sql->bindValue(':id',$id);
+        $sql->execute();
     }
     public function findAll(){
         $array = [];
