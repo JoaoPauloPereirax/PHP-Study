@@ -17,5 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 /*
-Essa rota está dizendo: quando o usuário acessar via get a raiz do sistema ele vai rodar essa função vai carregar um view chamado welcome, vamos trocar esse cara
+Essa rota está dizendo: quando o usuário acessar via get a raiz do sistema ele vai rodar essa função vai carregar um view chamado welcome
 */
+Route::get('/teste',function(){
+    echo "basicão testado!";
+});
