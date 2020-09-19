@@ -2,11 +2,11 @@
 namespace src;
 
 class Config {
-    const BASE_DIR = '/1.mvc-master/public';
+    const BASE_DIR = '/PHP-Study/7.PadrãoMVC/1.mvc-master/public';
 
     const DB_DRIVER = 'mysql';
     const DB_HOST = 'localhost';
-    const DB_DATABASE = 'test';
+    const DB_DATABASE = 'user';
     CONST DB_USER = 'root';
     const DB_PASS = '';
 
