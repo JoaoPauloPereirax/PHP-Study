@@ -1,5 +1,5 @@
 <?php
-//Nunca vou salvar a senha com o nome literal
+//Nunca vou salvar a senha com o nome literal(quesito de segurança)
 $senha= '1234';
 $hashdefaul=password_hash($senha,PASSWORD_DEFAULT);
 
