@@ -29,5 +29,13 @@ class UsuariosController extends Controller {
             //redirect para /novo
         
     }
+
+    public function edit($args){
+
+    }
+
+    public function del($args){
+
+    }
   
 }
