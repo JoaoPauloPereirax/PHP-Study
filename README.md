@@ -1,6 +1,13 @@
 # PHP-Study
 
 Aqui estão vários códigos desenvolvidos durante o curso de PHP na plataforma B7WEB (Professor Bonieky).
+## Executando
+
+Para executar os arquivos php, devemos ir até a pasta do arquivo no terminal em seguida usar o código.
+
+```
+$ php nomeDoArquivo.php
+```
 
 ### 1.Introdução PHP
 
